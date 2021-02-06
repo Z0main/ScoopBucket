@@ -1,0 +1,57 @@
+{
+    "homepage": "https://aria2.github.io/",
+    "description": "Lightweight multi-protocol & multi-source command-line download utility",
+    "license": "GPL-2.0-or-later",
+    "version": "1.35.0-1",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0-win-32bit-build1.zip",
+            "hash": "60b3720d1d08ff0124224c53e5f0ee05a4427782e2abc63b6a67c023aa5ffb66",
+            "extract_dir": "aria2-1.35.0-win-32bit-build1"
+        },
+        "64bit": {
+            "url": "https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0-win-64bit-build1.zip",
+            "hash": "81a231aa72966cf9a7a63bf40de9053261ff6b176877685e054591849c28eafa",
+            "extract_dir": "aria2-1.35.0-win-64bit-build1"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$presist_dir\\aria2.conf\")) {New-Item \"$dir\\aria2.conf\" -ItemType File | Out-Null}",
+        "if (!(Test-Path \"$presist_dir\\aria2.session\")) {New-Item \"$dir\\aria2.session\" -ItemType File | Out-Null}",
+        "if (!(Test-Path \"$presist_dir\\aria2.log\")) {New-Item \"$dir\\aria2.log\" -ItemType File | Out-Null}",
+        "if (!(Test-Path \"$presist_dir\\aria2.crt\")) {New-Item \"$dir\\aria2.crt\" -ItemType File | Out-Null}",
+        "if (!(Test-Path \"$presist_dir\\aria2.key\")) {New-Item \"$dir\\aria2.key\" -ItemType File | Out-Null}"
+    ],
+    "bin": [
+        "aria2c.exe",
+        [
+            "aria2c.exe",
+            "AriaD",
+            "--conf-path $dir\\aria2.conf"
+        ]
+    ],
+    "persist": [
+        "aria2.conf",
+        "aria2.session",
+        "aria2.log",
+        "aria2.crt",
+        "aria2.key"
+    ],
+    "checkver": {
+        "github": "https://github.com/aria2/aria2",
+        "re": "/release-(?:[\\d.]+)/aria2-(?<version>[\\d.]+)-win-64bit-build(?<build>[\\d]+).zip",
+        "replace": "${version}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/aria2/aria2/releases/download/release-$matchVersion/aria2-$matchVersion-win-32bit-build$matchBuild.zip",
+                "extract_dir": "aria2-$matchVersion-win-32bit-build$matchBuild"
+            },
+            "64bit": {
+                "url": "https://github.com/aria2/aria2/releases/download/release-$matchVersion/aria2-$matchVersion-win-64bit-build$matchBuild.zip",
+                "extract_dir": "aria2-$matchVersion-win-64bit-build$matchBuild"
+            }
+        }
+    }
+}
