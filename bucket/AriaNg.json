@@ -1,0 +1,25 @@
+{
+    "homepage": "http://ariang.mayswind.net/",
+    "description": "AriaNg all in one",
+    "version": "1.0",
+    "url": "https://github.com/mayswind/AriaNg/releases/download/1.1.7/AriaNg-1.1.7-AllInOne.zip",
+    "hash": "sha256:CA670EA1D142F129D79F4EC421B048EA4BC2220F4A28464DA321CDC0D8F44CF1",
+    "persist": "AriaNgConfig",
+    "shortcuts": [
+        [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "AriaNg",
+            "Start-Process -FilePath $dir\\index.html"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/mayswind/AriaNg"
+    },
+    "autoupdate": {
+        "url": "https://github.com/mayswind/AriaNg/releases/download/$version/AriaNg-$version-AllInOne.zip",
+        "hash": {
+            "url": "$url.dgst",
+            "regex": "SHA512= $sha512"
+        }
+    }
+}
