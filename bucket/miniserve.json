@@ -1,0 +1,14 @@
+{
+    "homepage": "https://github.com/svenstaro/miniserve",
+    "description": "For when you really just want to serve some files over HTTP right now!",
+    "version": "0.10.4",
+    "url": "https://github.com/svenstaro/miniserve/releases/download/v0.10.4/miniserve-v0.10.4-windows-x86_64.exe#/miniserve.exe",
+    "hash": "79a2963a9042cb2f589eb1bce303bbb92d81346c2c9d7cd49b2de20761739701",
+    "bin": "miniserve.exe",
+    "checkver": {
+        "github": "https://github.com/svenstaro/miniserve"
+    },
+    "autoupdate": {
+        "url": "https://github.com/svenstaro/miniserve/releases/download/$version/miniserve-$version-windows-x86_64.exe#minserve.exe"
+    }
+}
