@@ -50,9 +50,9 @@
     ],
     "persist": [
         "home",
-        ["etc\\mirrorlist.mingw32", "etc\\mirrorlist.mingw32"],
-        ["etc\\mirrorlist.mingw64", "etc\\mirrorlist.mingw64"],
-        ["etc\\mirrorlist.msys", "etc\\mirrorlist.msys"]
+        ["etc\\pacman.d\\mirrorlist.mingw32", "etc\\pacman.d\\mirrorlist.mingw32"],
+        ["etc\\pacman.d\\mirrorlist.mingw64", "etc\\pacman.d\\mirrorlist.mingw64"],
+        ["etc\\pacman.d\\mirrorlist.msys", "etc\\pacman.d\\mirrorlist.msys"]
     ],
     "checkver": {
         "url": "https://github.com/msys2/msys2-installer",
