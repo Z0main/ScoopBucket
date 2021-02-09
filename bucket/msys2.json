@@ -52,7 +52,7 @@
         "home",
         ["etc\\mirrorlist.mingw32", "etc\\mirrorlist.mingw32"],
         ["etc\\mirrorlist.mingw64", "etc\\mirrorlist.mingw64"],
-        ["etc\\mirrorlist.msys", "etc\\mirrorlist.msys"],
+        ["etc\\mirrorlist.msys", "etc\\mirrorlist.msys"]
     ],
     "checkver": {
         "url": "https://github.com/msys2/msys2-installer",
