@@ -1,9 +1,9 @@
 {
     "homepage": "http://ariang.mayswind.net/",
     "description": "AriaNg all in one",
-    "version": "1.1.7",
-    "url": "https://github.com/mayswind/AriaNg/releases/download/1.1.7/AriaNg-1.1.7-AllInOne.zip",
-    "hash": "ca670ea1d142f129d79f4ec421b048ea4bc2220f4a28464da321cdc0d8f44cf1",
+    "version": "1.2.0",
+    "url": "https://github.com/mayswind/AriaNg/releases/download/1.2.0/AriaNg-1.2.0-AllInOne.zip",
+    "hash": "b1361f28b4e6f102bd69c8b7d5fc96b5b4787726c9025bea827dd157f576b6e0",
     "persist": "AriaNgConfig",
     "shortcuts": [
         [
